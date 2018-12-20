@@ -23,6 +23,7 @@ public class MqttHelper {
     String xh = UUID.randomUUID().toString().replaceAll("-", "").toUpperCase();
     final String clientId = xh;
     final String subscriptionTopic = "cropnet/+";
+    final String specific_topic = "cropnet/";
 
     final String username = "cattronics";
     final String password = "code-for-fun";
@@ -111,4 +112,17 @@ public class MqttHelper {
             ex.printStackTrace();
         }
     }
+
+    private void custom_publish(String extraTopic,byte data[]) {
+        try {
+            MqttMessage message = new MqttMessage(data);
+            String topic  = specific_topic + extraTopic;
+            mqttAndroidClient.publish(topic,message);
+
+        } catch (MqttException ex) {
+            System.err.println("Exceptionst subscribing");
+            ex.printStackTrace();
+        }
+    }
 }
+
