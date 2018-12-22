@@ -18,15 +18,14 @@ import java.util.UUID;
 public class MqttHelper {
     public MqttAndroidClient mqttAndroidClient;
 
-    final String serverUri = "tcp://cattronics.com:1883";
+    final String serverUri = "tcp://infinitethirst.com:1883";
 
     String xh = UUID.randomUUID().toString().replaceAll("-", "").toUpperCase();
     final String clientId = xh;
-    final String subscriptionTopic = "cropnet/+";
-    final String specific_topic = "cropnet/";
-
-    final String username = "cattronics";
-    final String password = "code-for-fun";
+    final String subscriptionTopic = "project/+";
+    final String specific_topic = "krishibid/";
+    final String username = "cropnet";
+    final String password = "cropnet";
 
     public MqttHelper(Context context){
         mqttAndroidClient = new MqttAndroidClient(context, serverUri, clientId);

@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
                     Bitmap selectedImage = BitmapFactory.decodeFile(filePath);
                     int bitWidth = selectedImage.getWidth();
-                    int outWidth = 200;
+                    int outWidth = 100;
                     float rate = bitWidth/outWidth;
                     int bitHeight = selectedImage.getHeight()/(int) rate;
                     Bitmap resized = Bitmap.createScaledBitmap(selectedImage,outWidth, bitHeight, true);
@@ -96,14 +96,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void send(View view){
-        String topic = "cropnet/imgdata";
-
+        String topic = "project/krishibid/image";
         byte[] img_byte = processImage.convert(image_bit);
         MqttMessage message = new MqttMessage(img_byte);
+        Log.v("Mqtt", "Payload Ready");
         try {
+            String img_to_string = Base64.encodeToString(img_byte, Base64.DEFAULT);
+            Log.v("Mqtt ImageBase64",img_to_string);
+            Log.v("Mqtt", "Sending Data");
+
             mqttclnt.mqttAndroidClient.publish(topic,message);
+            Log.v("Mqtt", "Sending Finished");
+            imginfo.setText("Image sent");
         } catch (MqttException e) {
-            Log.v("Sending Failure", e.getMessage());
+            Log.v("Mqtt Sending Failure", e.getMessage());
         }
 
     }
