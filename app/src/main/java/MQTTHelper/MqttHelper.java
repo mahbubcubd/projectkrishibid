@@ -22,8 +22,8 @@ public class MqttHelper {
 
     String xh = UUID.randomUUID().toString().replaceAll("-", "").toUpperCase();
     final String clientId = xh;
-    final String subscriptionTopic = "project/+";
-    final String specific_topic = "krishibid/";
+    final String subscriptionTopic = "project/krishibid/#";
+//    final String specific_topic = "krishibid/#";
     final String username = "cropnet";
     final String password = "cropnet";
 
@@ -97,7 +97,7 @@ public class MqttHelper {
             mqttAndroidClient.subscribe(subscriptionTopic, 0, null, new IMqttActionListener() {
                 @Override
                 public void onSuccess(IMqttToken asyncActionToken) {
-                    Log.w("Mqtt","Subscribed!");
+                    Log.w("Mqtt Subscribed",subscriptionTopic);
                 }
 
                 @Override
@@ -112,16 +112,6 @@ public class MqttHelper {
         }
     }
 
-    private void custom_publish(String extraTopic,byte data[]) {
-        try {
-            MqttMessage message = new MqttMessage(data);
-            String topic  = specific_topic + extraTopic;
-            mqttAndroidClient.publish(topic,message);
 
-        } catch (MqttException ex) {
-            System.err.println("Exceptionst subscribing");
-            ex.printStackTrace();
-        }
-    }
 }
 

@@ -16,6 +16,7 @@ import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallbackExtended;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
+import org.json.JSONObject;
 
 import MQTTHelper.MqttHelper;
 import in.mayanknagwanshi.imagepicker.imageCompression.ImageCompressionListener;
@@ -38,8 +39,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         im = (ImageView) findViewById(R.id.im);
-        startMqtt();
         imginfo = (TextView) findViewById(R.id.img_info);
+        startMqtt();
+
 
     }
 
@@ -96,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void send(View view){
-        String topic = "project/krishibid/image";
+        String topic = "project/krishibid/detection_feed";
         byte[] img_byte = processImage.convert(image_bit);
         MqttMessage message = new MqttMessage(img_byte);
         Log.v("Mqtt", "Payload Ready");
@@ -107,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
 
             mqttclnt.mqttAndroidClient.publish(topic,message);
             Log.v("Mqtt", "Sending Finished");
-            imginfo.setText("Image sent");
+            imginfo.setText("Image sent. Waiting for The result");
         } catch (MqttException e) {
             Log.v("Mqtt Sending Failure", e.getMessage());
         }
@@ -137,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void startMqtt() {
         mqttclnt = new MqttHelper(getApplicationContext());
+
         mqttclnt.setCallback(new MqttCallbackExtended() {
             @Override
             public void connectComplete(boolean b, String s) {
@@ -150,8 +153,19 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void messageArrived(String topic, MqttMessage mqttMessage) throws Exception {
-                Log.w("Debug", mqttMessage.toString());
-                imginfo.setText(mqttMessage.toString());
+                String[] received_topic= topic.toString().split("/",5);
+                Log.v("Debug Received", topic.toString());
+                if(received_topic[2].equals("detection_result")){
+//                    String toShow = mqttMessage.toString();
+                    JSONObject received_json  = new JSONObject(mqttMessage.toString());
+                    String detectionResult = received_json.getString("detection_result");
+                    String accuracy  = received_json.getString("accuracy");
+                    String toShow = "Result : " +detectionResult + " Accuracy: " +accuracy;
+                    imginfo.setText(toShow);
+                }else {
+                    imginfo.setText(received_topic[2]);
+                }
+
             }
 
             @Override
