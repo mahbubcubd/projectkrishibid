@@ -1,3 +1,57 @@
 <resources>
     <string name="app_name">projectkrishibid</string>
+    <string name="online"> রোগ শনাক্তকরণ</string>
+    <string name="monitoring"> মনিটরিং </string>
+    <string name="agronomist"> কৃষি জিজ্ঞাসা </string>
+    <string name="analysis">  সামগ্রিক  রিপোর্ট</string>
+    <string name="without_internet">   ইন্টারনেট  ছাড়া</string>
+    <string name="with_internet">   ইন্টারনেটে  সনাক্তকরণ</string>
+    <string name="portal"> কৃষি  পোর্টাল</string>
+    <string name="title_activity_testlist">testlist</string>
+    <string name="action_settings">Settings</string>
+    <string name="temp_name"> তাপমাত্রা</string>
+    <string name="humidity">  জলীয়বাষ্পের পরিমাণ</string>
+    <string name="moisture">মাটির আর্দ্রতা</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="blast">
+        ব্লাস্ট একটি ছত্রাকজনিক রোগ। রোগপ্রবণ ধানের জাত, বেলে জাতীয় মাটি এবং বেশি ইউরিয়া সার প্রয়োগ এ
+        রোগ বৃদ্ধিতে সাহায্য করে। এছাড়া রাতে ঠাণ্ডা, দিনে গরম ও সকালে পাতায় শিশির জমে থাকলেও এ  রোগ দ্রুত বিস্তার লাভ করে। \n
+
+</string>
+
+    <string name="blast_symptopm">
+    প্রথমে পাতায় ছোট ছোট ডিম্বাকৃতি দাগ হয়। আস্তে আস্তে দাগ বড়
+    হয়ে দুপ্রান্ত লম্বা হয়ে চোখের আকৃতি ধারণ করে। দাগের চারদিকের অংশ গাঢ় বাদামি
+    ও মাঝের অংশ সাদা-ছাই বর্ণ ধারন করে। অনেকগুলো দাগ একত্রে মিধে গিয়ে পুরো পাতাই মরে যায়।
+    এ রোগের কারণে জমির সমস্ত ধান নষ্ট হয়ে যেতে পারে। বাংলাদেশে এ রোগ বোরো মৌসুমেই বেশি হয়।
+    পাতার ব্লাস্ট না হলেও শিষব্লাস্ট হয় এবং এতে শিষ ভেঙে পড়ে ও ধান চিটা হয়। \n
+
+</string>
+    <string name="blast_remedy">
+        ১। জমিতে পানি ধরে রাখুন। \n
+        ২। বীজ শোধন করে ব্যবহার করুন। \n
+        ৩। সুষম মাত্রায় সার ব্যবহার করুন। আক্রান্ত জমিতে ইউরিয়া সারের উপরি-প্রয়োগ বন্ধ রাখুন। \n
+        ৪। হেক্টরপ্রতি ৮০০ মিলিলিটার হিনোসান অথবা ২.৫ কেজি হোমাই বা টপসিন-এম আক্রান্ত জমিতে প্রয়োগ করুন। \n
+        ৫। রোগ প্রতিরোধশীল জাত, যেমন বিপ্লব (বিআর৩), দুলাভোগ (বিআর৫), গাজী (বিআর১৪), মোহিনী (বিআর১৫), শাহীবালাম (বিআর১৬), শ্রাবণী (বিআর২৬), ও ব্রি ধান৩৩ এর চাষ করুন।
+
+    </string>
+    <string name="title_activity_detection_method">detectionMethod</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
 </resources>
+

@@ -1,6 +1,6 @@
 package ml.mahbub.projectkrishibid;
 
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
@@ -10,6 +10,7 @@ import org.eclipse.paho.client.mqttv3.MqttCallbackExtended;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 
 import MQTTHelper.MqttHelper;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class mqtt extends AppCompatActivity {
     MqttHelper mqttHelper;

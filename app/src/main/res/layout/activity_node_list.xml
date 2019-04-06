@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".nodeList">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="5dp"
+        android:background="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/node700"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:onClick="node800"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                >
+                <ImageView
+                    android:src="@drawable/node"
+                    android:layout_height="100dp"
+                    android:layout_width="100dp"
+                    android:padding="30dp"
+                    android:background="@drawable/holo_unknown"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Node 700"
+                    android:textSize="24dp"
+                    android:onClick="node700"
+                    android:textStyle="bold"
+                    />
+
+
+            </LinearLayout>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:onClick="overall"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                >
+                <ImageView
+                    android:src="@drawable/node"
+                    android:layout_height="150dp"
+                    android:layout_width="150dp"
+                    android:padding="30dp"
+                    android:background="@drawable/green_holo_circle"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:onClick="overall"
+                    android:text="সকল ডাটা"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    />
+
+
+            </LinearLayout>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".sensorsData">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="5dp"
+        android:background="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:onClick="rowTemp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                >
+                <ImageView
+                    android:src="@drawable/temp"
+                    android:layout_height="100dp"
+                    android:layout_width="100dp"
+                    android:padding="20dp"
+                    android:background="@drawable/orange_circle"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/temp_name"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorPrimary"
+                    />
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:onClick="humidityLogger"
+                >
+                <ImageView
+                    android:src="@drawable/humidity"
+                    android:layout_height="100dp"
+                    android:layout_width="100dp"
+                    android:padding="15dp"
+                    android:background="@drawable/purple_circle"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/humidity"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorPrimary"
+                    />
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:onClick="moisture"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                >
+                <ImageView
+                    android:src="@drawable/plant"
+                    android:layout_height="100dp"
+                    android:layout_width="100dp"
+                    android:padding="15dp"
+                    android:background="@drawable/green_circle"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textSize="20dp"
+                    android:text="@string/moisture"
+                    android:textColor="@color/colorPrimary"
+                    />
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                >
+                <ImageView
+                    android:src="@drawable/chart"
+                    android:layout_height="100dp"
+                    android:layout_width="100dp"
+                    android:padding="15dp"
+                    android:background="@drawable/light_green"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="চার্ট"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorPrimary"
+                    />
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+

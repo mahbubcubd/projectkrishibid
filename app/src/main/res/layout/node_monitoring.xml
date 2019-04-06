@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:elevation="5dp">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        >
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+           android:gravity="center"
+            android:layout_width="match_parent"
+            >
+
+
+                <TextView
+                    android:layout_height="100dp"
+                    android:id="@+id/ltemp"
+                    android:layout_width="100dp"
+
+                    android:text="0"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:background="@drawable/green_holo_circle"
+                    />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="তাপমাত্রা"
+                android:gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            >
+
+
+            <TextView
+                android:layout_height="100dp"
+                android:id="@+id/lmois"
+                android:layout_width="100dp"
+
+                android:text="0"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/colorAccent"
+                android:background="@drawable/green_holo_circle"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" মাটির তাপমাত্রা"
+                android:gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            >
+
+
+            <TextView
+                android:layout_height="100dp"
+                android:id="@+id/lhum"
+                android:layout_width="100dp"
+
+                android:text="0"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/colorAccent"
+                android:background="@drawable/green_holo_circle"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" মাটির আর্দ্রতা "
+                android:gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
+
